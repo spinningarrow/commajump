@@ -3,12 +3,12 @@ function , --description 'Commajump'
 	set found_folders (printf '%s\n' $found_paths | xargs basename | grep -in $argv)
 
 	if test (count $found_folders) -ne 0
-		set found_paths $found_paths[(printf '%s\n' $found_folders | \
+		set found_paths $found_paths[(for i in $found_folders; echo $i; end | \
 			cut -d':' -f1 | \
 			paste -d' ' -s -)]
 	end
 
-	set found_directory (printf '%s\n' $found_paths | \
+	set found_directory (for i in $found_paths; echo $i; end | \
 		uniq -c | \
 		sort -nr | \
 		head -1 | \
