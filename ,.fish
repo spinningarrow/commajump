@@ -18,7 +18,7 @@ function , --description 'Commajump'
 
 	if not test -z $found_directory; and not test -d $found_directory
 		grep -v \^$found_directory\$ ~/.commajump > ~/.commajump.temp
-		mv ~/.commajump{.temp,}
+		and mv ~/.commajump{.temp,}
 		and echo Nonexistent path $found_directory pruned.
 	end
 
