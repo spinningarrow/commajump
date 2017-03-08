@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+set version (git tag --list | sort -r | head -1)
+
+cp ,.fish ~/.config/fish/functions/,.fish
+cp __commajump_add.fish ~/.config/fish/functions/__commajump_add.fish
+
+set -U commajump_version $version

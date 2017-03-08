@@ -4,9 +4,9 @@ Stupid simple autojump clone. Fish shell only (for now).
 
 ## Install
 
-1. Put `,.fish` and `__commajump_add.fish` in the `functions` folder inside the
-   fish config folder (i.e. `~/.config/fish/functions/`)
-2. Add this to your `config.fish`
+1. Clone the repository
+2. Run `./install`
+3. Add this to your `config.fish`
 
 		source ~/.config/fish/functions/__commajump_add.fish
 
