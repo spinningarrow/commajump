@@ -20,9 +20,3 @@ directory that has been previously navigated to.
 1. Case sensitive
 2. Non-fuzzy search
 3. Favours search term in folder name over path name
-
-## Known Issues
-
-commajump currently does not behave properly with folder names that contain
-spaces, mostly because of
-[fish-shell#159](https://github.com/fish-shell/fish-shell/issues/159)
