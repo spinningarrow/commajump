@@ -20,3 +20,5 @@ directory that has been previously navigated to.
 1. Case sensitive
 2. Non-fuzzy search
 3. Favours search term in folder name over path name
+4. Prunes dead directories from the data store if they are searched for but no
+   longer exist
