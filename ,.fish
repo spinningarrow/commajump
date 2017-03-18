@@ -22,6 +22,10 @@ function , --description 'Commajump'
 		and echo Nonexistent path $found_directory pruned.
 	end
 
-	cd $found_directory ^ /dev/null
-	or echo No directories matching "'$argv'" found.
+	if test -z $found_directory
+		echo No directories matching "'$argv'" found.
+		return 1
+	end
+
+	cd $found_directory
 end
