@@ -1,5 +1,6 @@
 function , --description 'Commajump'
-	set found_paths (grep $argv ~/.commajump | grep -v (pwd)\$)
+	set -q COMMAJUMP_PATH; or set COMMAJUMP_PATH ~/.commajump
+	set found_paths (grep $argv $COMMAJUMP_PATH | grep -v (pwd)\$)
 	set found_folders (printf '%s\0' $found_paths | xargs -0 basename | grep -in $argv)
 
 	if test (count $found_folders) -ne 0
@@ -17,9 +18,10 @@ function , --description 'Commajump'
 		cut -d' ' -f2-)
 
 	if not test -z $found_directory; and not test -d $found_directory
-		grep -v \^$found_directory\$ ~/.commajump > ~/.commajump.temp
-		and mv ~/.commajump{.temp,}
+		grep -v \^$found_directory\$ $COMMAJUMP_PATH > $COMMAJUMP_PATH.temp
+		and mv $COMMAJUMP_PATH{.temp,}
 		and echo Nonexistent path $found_directory pruned.
+		return 1
 	end
 
 	if test -z $found_directory
