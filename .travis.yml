@@ -1,0 +1,7 @@
+language: nix
+
+before_install:
+  - curl 'https://raw.githubusercontent.com/fisherman/fishtape/master/fishtape.fish' > $HOME/.config/fish/functions
+
+script:
+  fishtape tests/tests.fish
