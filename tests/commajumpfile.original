@@ -1,6 +1,6 @@
-/Users/sahil/dev/commajump/tests/dirs/foo
-/Users/sahil/dev/commajump/tests/dirs/bar
-/Users/sahil/dev/commajump/tests/dirs/baz
-/Users/sahil/dev/commajump/tests/dirs/baz
-/Users/sahil/dev/commajump/tests/dirs/larry/moe/curly
-/Users/sahil/dev/commajump/tests/dirs/nonexistent
+@pwd@/tests/dirs/foo
+@pwd@/tests/dirs/bar
+@pwd@/tests/dirs/baz
+@pwd@/tests/dirs/baz
+@pwd@/tests/dirs/larry/moe/curly
+@pwd@/tests/dirs/nonexistent

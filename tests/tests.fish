@@ -4,7 +4,7 @@ function commatest
 end
 
 function setup
-	cp (pwd)/tests/commajumpfile{.original,}
+	sed s:@pwd@:(pwd): (pwd)/tests/commajumpfile.original > (pwd)/tests/commajumpfile
 end
 
 function teardown
