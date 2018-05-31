@@ -1,4 +1,4 @@
-# commajump
+# commajump ![Build status](https://travis-ci.org/spinningarrow/commajump.svg?branch=master)
 
 Stupid simple autojump clone. Fish shell only (for now).
 
