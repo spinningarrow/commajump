@@ -3,4 +3,4 @@ language: nix
 before_install:
   - curl -O 'https://raw.githubusercontent.com/fisherman/fishtape/master/fishtape.fish'
 
-script: nix-shell --command "fish -c 'source fishtape.fish; fishtape tests/tests.fish'"
+script: nix-shell --command "fish -c 'source fishtape.fish; make test'"
