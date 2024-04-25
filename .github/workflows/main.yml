@@ -10,13 +10,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+
     - uses: cachix/install-nix-action@v22
       with:
         nix_path: nixpkgs=channel:nixos-unstable
-    
+
     - run: |
         nix-shell --command "fish -c '\
           curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher;\
           fisher install jorgebucaran/fishtape;\
-          make test'"
+          make test'" | tee results.tap
+
+    - name: Test Summary
+      uses: test-summary/action@v2
+      with:
+        paths: "results.tap"
+      if: always()
