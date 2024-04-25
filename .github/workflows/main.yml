@@ -20,9 +20,10 @@ jobs:
         nix-shell --command "fish -c '\
           curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher;\
           fisher install jorgebucaran/fishtape;\
-          make test'" | tee results.tap
+          make test | test results.tap'"
 
     - name: Test Summary
-      if: always()
-      run: |
-        cat results.tap >> $GITHUB_STEP_SUMMARY
+      uses: pcolby/tap-summary@v1
+      with:
+        path: >-
+          results.tap
