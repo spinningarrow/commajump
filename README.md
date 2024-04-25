@@ -1,4 +1,4 @@
-# commajump ![Build status](https://travis-ci.org/spinningarrow/commajump.svg?branch=master)
+# commajump [![Tests](https://github.com/spinningarrow/commajump/actions/workflows/main.yml/badge.svg)](https://github.com/spinningarrow/commajump/actions/workflows/main.yml)
 
 Stupid simple superfast autojump clone. Fish shell only (for now).
 
