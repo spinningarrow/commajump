@@ -20,7 +20,7 @@ jobs:
         nix-shell --command "fish -c '\
           curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher;\
           fisher install jorgebucaran/fishtape;\
-          make test | test results.tap'"
+          make test | tee results.tap'"
 
     - name: Test Summary
       uses: pcolby/tap-summary@v1
