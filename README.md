@@ -1,6 +1,10 @@
 # commajump ![Build status](https://travis-ci.org/spinningarrow/commajump.svg?branch=master)
 
-Stupid simple autojump clone. Fish shell only (for now).
+Stupid simple superfast autojump clone. Fish shell only (for now).
+
+## Superfast?
+
+Mostly because it's zero-overhead (it's a shell function instead of a script with a runtime ).
 
 ## Install
 
